@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sozlukyeni/fab.dart';
-
+import 'package:sozlukyeni/gizlilik.dart';
 
 void main() => runApp(const MyApp());
 
@@ -95,10 +95,7 @@ class MyHomePage extends StatelessWidget {
               leading: Icon(Icons.privacy_tip), // Icon eklendi
               title: const Text('Gizlilik Politikası'),
               onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => GizlilikPolitikasi()));
               },
             ),
           ],
@@ -119,3 +116,4 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
